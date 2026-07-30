@@ -1,59 +1,126 @@
 # Remin — Architecture
 
-## Overview
+## Design Philosophy
 
-Remin is a full-stack Next.js application using the App Router pattern.
+Remin separates facts, reasoning, and interaction.
 
-## Layers
+AI models may change.
 
-```
-┌─────────────────────────────────────────┐
-│              Presentation               │
-│         (App Router / React / UI)       │
-├─────────────────────────────────────────┤
-│             Application                 │
-│     (Server Actions / API Routes)       │
-├─────────────────────────────────────────┤
-│               Domain                    │
-│     (Types / Interfaces / Logic)        │
-├─────────────────────────────────────────┤
-│            Infrastructure               │
-│   (Database / Storage / Integrations)   │
-└─────────────────────────────────────────┘
-```
-
-## Key Directories
-
-| Directory | Purpose |
-|-----------|---------|
-| `app/` | Next.js App Router pages and layouts |
-| `components/` | Reusable UI components |
-| `lib/` | Shared utilities, helpers, and configuration |
-| `types/` | TypeScript type definitions and interfaces |
-| `backend/` | Server-side logic, services, and data access |
-| `frontend/` | Client-side hooks, state, and utilities |
-| `public/` | Static assets |
-| `docs/` | Documentation |
-| `specs/` | Feature specifications |
-| `prompts/` | AI prompt templates |
-| `decisions/` | Architecture Decision Records |
-| `experiments/` | Prototypes and experiments |
-| `research/` | Research notes and references |
-
-## Data Strategy
-
-- **Static inventory** (items, fragrances, products): JSON/Markdown in Git.
-- **Dynamic state** (wear counts, stock levels, journal): Database (TBD).
-- **Sync layer**: Bidirectional sync between Git files and database.
-
-## Integration Points (Future)
-
-- AI Provider (recommendation engine)
-- Weather API (daily context)
-- Email service (daily briefing)
-- Authentication (multi-user support)
-- Calendar integration
+The architecture should not.
 
 ---
 
-*This document will be updated as the architecture solidifies.*
+# Layer 1 — Truth
+
+The canonical state of Remin.
+
+Responsible for:
+
+- Inventory
+- Calendar state
+- Preferences
+- Relationships
+- History
+- Events
+- Feedback
+
+The database stores facts.
+
+Never opinions.
+
+---
+
+# Layer 2 — Intelligence
+
+Reasoning engines.
+
+Can:
+
+- Recommend
+- Explain
+- Predict
+- Compare
+- Summarize
+
+Cannot permanently modify truth without explicit authorization.
+
+Multiple AI providers may exist simultaneously.
+
+---
+
+# Layer 3 — Eywa
+
+Executive orchestration.
+
+Responsibilities:
+
+- Understand user intent.
+- Delegate work.
+- Maintain conversation.
+- Respect Remin philosophy.
+- Protect user attention.
+
+Eywa is an identity.
+
+Not a language model.
+
+---
+
+# Layer 4 — Modules
+
+Independent systems.
+
+Examples:
+
+- Orbit
+- Argus
+- Weave
+- Prism
+- Loom
+- Mirin
+- Remira
+- Fyodor
+
+Each module owns exactly one domain.
+
+Every module has a Capability Contract.
+
+---
+
+# Layer 5 — Interface
+
+How the user interacts with Remin.
+
+Possible interfaces include:
+
+- Web
+- Mobile
+- CLI
+- Voice
+- Future interfaces
+
+The interface should never contain business logic.
+
+---
+
+## Architectural Rules
+
+1. Facts never originate from AI.
+
+2. AI reasons over facts.
+
+3. Every autonomous action is auditable.
+
+4. Every module has one responsibility.
+
+5. Every recommendation is explainable.
+
+6. The user remains the final authority.
+
+7. AI providers are interchangeable.
+
+---
+
+This document defines the architecture.
+
+Implementation details belong elsewhere.

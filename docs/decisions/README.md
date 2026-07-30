@@ -1,37 +1,101 @@
-# Architecture Decision Records (ADRs)
+# Architecture Decision Records (ADR)
 
-This directory contains Architecture Decision Records for Remin.
+Architecture Decision Records document important engineering decisions made throughout Remin's development.
 
-## What is an ADR?
+The goal is to preserve context, reasoning, and consequences.
 
-An ADR is a short document that captures an important architectural decision, the context behind it, and its consequences.
-
-## Format
-
-Each ADR should follow this structure:
-
-```
-# ADR-NNN: Title
-
-## Status
-draft | accepted | deprecated | superseded
-
-## Context
-What is the situation that calls for a decision?
-
-## Decision
-What decision was made?
-
-## Consequences
-What are the positive and negative results of this decision?
-```
-
-## Index
-
-| ADR | Title | Status |
-|-----|-------|--------|
-| — | *No decisions recorded yet.* | — |
+Future contributors should understand not only what was decided, but why.
 
 ---
 
-*Add new ADRs as `NNNN-title.md` files in this directory.*
+# Naming
+
+ADR-0001
+
+ADR-0002
+
+ADR-0003
+
+...
+
+Numbers are never reused.
+
+---
+
+# Template
+
+## Title
+
+A concise summary.
+
+---
+
+## Status
+
+- Proposed
+- Accepted
+- Superseded
+- Deprecated
+
+---
+
+## Context
+
+What problem required this decision?
+
+---
+
+## Decision
+
+What was chosen?
+
+---
+
+## Alternatives Considered
+
+List reasonable alternatives.
+
+Explain why they were rejected.
+
+---
+
+## Consequences
+
+Positive outcomes.
+
+Trade-offs.
+
+Future implications.
+
+---
+
+## References
+
+Related documents.
+
+Relevant specifications.
+
+---
+
+# Principles
+
+Every significant architectural decision deserves an ADR.
+
+Examples include:
+
+- Data ownership
+- Storage strategy
+- AI provider abstraction
+- Module architecture
+- Event system
+- Security model
+
+Implementation details generally do not require ADRs.
+
+---
+
+# Closing Principle
+
+Architecture evolves.
+
+The reasoning behind architectural decisions should never be lost.

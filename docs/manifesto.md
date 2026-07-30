@@ -1,25 +1,56 @@
 # Remin — Manifesto
 
-## What We Build
+## We Believe
 
-We build software that respects the craft of personal presentation.
+Memory should support intelligence.
 
-Remin exists because the things you own — your clothes, your fragrances, your grooming products — deserve the same thoughtful management as your calendar, your finances, or your fitness.
+Automation should support freedom.
 
-## What We Reject
-
-- **Throwaway fashion apps** that treat your wardrobe as a gallery.
-- **Overcomplicated dashboards** that prioritize features over clarity.
-- **Cloud-dependent systems** that hold your data hostage.
-- **Generic recommendations** that ignore context, season, and personal taste.
-
-## What We Commit To
-
-- Every feature ships with a clear purpose.
-- Every module has a contract before it has code.
-- Every design decision is documented.
-- The system remains yours to run, export, and extend.
+Technology should reduce mental effort rather than demand more attention.
 
 ---
 
-*This is the north star. Everything we build should pass this filter.*
+## We Reject
+
+- AI replacing human judgment.
+- Feature accumulation without purpose.
+- Hidden automation.
+- Vendor lock-in.
+- Black-box recommendations.
+- Complexity without measurable value.
+
+---
+
+## We Build
+
+Software that earns trust through consistency.
+
+Systems that explain themselves when asked.
+
+Architecture that survives changing AI models.
+
+Modules with responsibilities instead of personalities.
+
+Automation that remains under human control.
+
+---
+
+## Every Feature Must Answer
+
+1. Does this reduce cognitive load?
+
+2. Is this information trustworthy?
+
+3. Can the user override it?
+
+4. Is the reasoning auditable?
+
+5. Would we still build this if today's AI disappeared?
+
+If the answer is "no," rethink the feature.
+
+---
+
+Remin should never become software that merely appears intelligent.
+
+It should become software that is dependable.

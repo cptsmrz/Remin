@@ -1,29 +1,104 @@
 # Remin — Philosophy
 
-## Design Principles
+## Core Principles
 
-1. **Offline-First** — Your data lives in your Git repository. The database is a performance layer, not the source of truth.
-2. **Modular by Default** — Every capability is a self-contained module with a clear contract.
-3. **No Premature Abstraction** — Build for today's needs, architect for tomorrow's.
-4. **Data Ownership** — You own your data. Export everything. Lock-in nothing.
-5. **Extensibility Over Completeness** — Ship clean interfaces now; implement integrations later.
+### 1. The User Comes First
 
-## Naming Convention
+Remin exists to serve the user.
 
-Remin modules are named after concepts that evoke intelligence, awareness, and craft:
-
-| Module | Purpose |
-|--------|----------|
-| Eywa | Central intelligence / AI orchestration |
-| Orbit | Daily routines and scheduling |
-| Argus | Monitoring, alerts, and inventory tracking |
-| Prism | Analytics and data visualization |
-| Weave | Outfit composition and recommendation |
-| Loom | Data synchronization and import/export |
-| Remira | The mirror — self-reflection and journaling |
-| Mirin | Grooming and personal care |
-| Fyodor | Fragrance collection management |
+The user always retains final authority.
 
 ---
 
-*This document will evolve as Remin grows.*
+### 2. Truth Before Intelligence
+
+Facts are more important than AI.
+
+The system must always distinguish between:
+
+- Facts
+- Inference
+- Assumptions
+- Speculation
+
+---
+
+### 3. Data Ownership
+
+The user owns all data.
+
+Every important dataset should be exportable.
+
+No vendor lock-in.
+
+---
+
+### 4. Local-First
+
+Remin should continue functioning even if cloud AI disappears.
+
+AI enhances the system.
+
+AI does not define the system.
+
+---
+
+### 5. Modularity
+
+Every capability belongs to exactly one module.
+
+No duplicated responsibilities.
+
+No overlapping ownership.
+
+---
+
+### 6. Explicit Autonomy
+
+Every autonomous action must have:
+
+- Permission
+- Scope
+- Explanation
+- Audit history
+- Reversible outcome
+
+---
+
+### 7. Learn Conservatively
+
+A single action should rarely change behavior.
+
+Patterns should.
+
+Repeated feedback earns greater influence.
+
+---
+
+### 8. Replaceability
+
+Every external dependency should be replaceable.
+
+Models.
+
+Databases.
+
+Notification providers.
+
+Storage.
+
+Nothing should become irreplaceable.
+
+---
+
+### 9. Simplicity Wins
+
+Prefer understandable systems over clever systems.
+
+Readable architecture scales better than impressive architecture.
+
+---
+
+### 10. Long-Term Thinking
+
+Every architectural decision should still make sense five years from today.
