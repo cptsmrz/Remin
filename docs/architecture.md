@@ -28,6 +28,21 @@ The database stores facts.
 
 Never opinions.
 
+### Truth Storage
+
+Truth may exist across multiple storage technologies, each with a distinct responsibility.
+
+| Storage Layer                        | Responsibility                                                                                                     |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| Runtime Storage                      | Operational facts, events, projections, and current application state                                              |
+| Versioned Knowledge Repository (Git) | Long-lived knowledge, documentation, inventory definitions, specifications, and other version-controlled artifacts |
+
+Operational storage exists to support the running application.
+
+The Versioned Knowledge Repository exists to preserve knowledge over time.
+
+Synchronization moves information between these layers according to the architectural rules defined by Remin.
+
 ---
 
 # Layer 2 — Intelligence

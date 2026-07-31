@@ -18,17 +18,33 @@ The architecture requires a predictable synchronization strategy that preserves 
 
 ## Decision
 
-Remin adopts an asynchronous synchronization strategy.
+Remin adopts an asynchronous synchronization strategy between operational storage and the Versioned Knowledge Repository.
 
-Synchronization is treated as a background responsibility rather than a blocking requirement.
+Synchronization is performed according to the type and purpose of the data being synchronized rather than treating all information equally.
 
-Core functionality must remain available even when synchronization is temporarily unavailable.
+Operational state is optimized for responsiveness and runtime behavior.
 
-Synchronization should prioritize preserving user data over immediate consistency.
+Knowledge artifacts are optimized for durability, versioning, collaboration, and long-term understanding.
+
+Synchronization should preserve semantic meaning while avoiding unnecessary duplication between storage layers.
 
 ---
 
 ## Principles
+
+### Storage Responsibilities
+
+Each storage layer has a distinct responsibility.
+
+| Layer                          | Primary Responsibility                                               |
+| ------------------------------ | -------------------------------------------------------------------- |
+| Runtime Storage                | Operational state, events, projections, caches                       |
+| Versioned Knowledge Repository | Human-readable knowledge, documentation, inventory, architecture     |
+| Synchronization Layer          | Coordinate movement of meaningful information between storage layers |
+
+No storage layer should attempt to fulfill every responsibility.
+
+Each exists to optimize a specific aspect of the system.
 
 ### User Never Waits
 

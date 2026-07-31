@@ -18,15 +18,40 @@ Traditional databases provide efficient storage but do not inherently preserve h
 
 ## Decision
 
-Remin adopts Git as its primary versioned knowledge repository for project artifacts and user-owned structured data that benefits from version history.
+Remin adopts Git as its **Versioned Knowledge Repository**.
 
-Git provides change tracking, branching, rollback, and synchronization capabilities while remaining independent of any specific hosting provider.
+Git is the authoritative source for long-lived knowledge artifacts such as inventory definitions, documentation, specifications, prompts, architecture decisions, and other human-readable assets.
 
-Where appropriate, data should be stored in human-readable formats such as Markdown, JSON, or YAML.
+Git is **not** the operational data store for runtime application state.
 
-Git complements, but does not replace, operational data stores used for application performance.
+Operational information—including event streams, caches, temporary state, usage metrics, and other rapidly changing data—is managed by dedicated runtime storage and synchronized with the knowledge repository when appropriate.
+
+The synchronization strategy determines which information is persisted to Git based on its long-term value rather than its frequency of change.
 
 ---
+
+### Repository Responsibilities
+
+Git is responsible for preserving knowledge.
+
+Examples include:
+
+* Inventory definitions
+* Documentation
+* Architecture Decision Records (ADRs)
+* Feature specifications
+* Prompt templates
+* Configuration intended for version control
+
+Git is not responsible for storing:
+
+* Runtime events
+* Temporary application state
+* High-frequency synchronization data
+* Session information
+* Performance caches
+
+These forms of operational data belong to the runtime layer and may be projected into Git only when they become meaningful knowledge.
 
 ## Principles
 
