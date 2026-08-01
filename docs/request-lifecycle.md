@@ -26,6 +26,9 @@ Eywa
 Relevant Module(s)
    │
    ▼
+Eywa
+   │
+   ▼
 Decision Engine
    │
    ▼
@@ -93,6 +96,8 @@ Examples include:
 
 Modules remain responsible only for their own domains.
 
+Modules return domain-specific information and functionality to Eywa.
+
 ---
 
 ### 5. Decision Engine
@@ -100,6 +105,8 @@ Modules remain responsible only for their own domains.
 When reasoning is required, Eywa delegates to the Decision Engine.
 
 The Decision Engine evaluates context, constraints, and available information before producing recommendations or decisions.
+
+The Decision Engine returns its results to Eywa.
 
 ---
 
@@ -115,9 +122,9 @@ They do not govern the system.
 
 ### 7. Response Assembly
 
-The Decision Engine returns its results to Eywa.
-
 Eywa combines module outputs into one coherent response while ensuring consistency with Remin's philosophy.
+
+Eywa continues orchestration after receiving reasoning results.
 
 ---
 

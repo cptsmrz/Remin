@@ -23,7 +23,7 @@ Domains exist to separate business concepts from implementation.
 | Journaling          | Reflection, notes, and personal history          | Remira         |
 | Analytics           | Trends, statistics, insights                     | Prism          |
 | Monitoring          | Alerts, tracking, integrity checks               | Argus          |
-| System Governance   | Governance, orchestration, decision coordination | Eywa           |
+| System Governance   | Governance supported by Eywa's orchestration layer | None           |
 
 ---
 

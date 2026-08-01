@@ -93,7 +93,6 @@ Modules use their canonical names.
 
 Examples:
 
-- Eywa
 - Orbit
 - Argus
 - Prism

@@ -8,7 +8,7 @@ Orbit manages daily routines, reminders, and scheduled tasks.
 
 ## Responsibilities
 
-- Morning briefing generation
+- Scheduled briefing generation and preparation for delivery.
 - Email automation and scheduling
 - Cron job management
 - Routine templates (morning, evening, travel)

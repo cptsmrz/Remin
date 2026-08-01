@@ -94,6 +94,16 @@ Recommendations are not.
 
 ---
 
+# Decision Engine
+
+The reasoning engine of Remin.
+
+When reasoning is required, Eywa delegates tasks to the Decision Engine.
+
+The Decision Engine evaluates context, constraints, and available information to generate recommendations or decisions, potentially utilizing one or more AI providers.
+
+---
+
 # Event
 
 A record that something happened.
@@ -128,6 +138,16 @@ Feedback may be:
 - Implicit
 - Temporary
 - Long-term
+
+---
+
+# Intent
+
+The structured representation of a user's objective after interpretation by Eywa.
+
+An Intent describes what the User wants to accomplish, independent of how it will be executed.
+
+Eywa evaluates Intent before coordinating modules or delegating reasoning.
 
 ---
 
