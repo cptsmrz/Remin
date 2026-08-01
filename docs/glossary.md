@@ -110,9 +110,9 @@ Events are immutable.
 
 # Eywa
 
-The executive intelligence of Remin.
+The executive governance and orchestration layer of Remin.
 
-Eywa coordinates modules, interprets user intent, and protects the philosophy of the system.
+Eywa coordinates modules, interprets user intent, protects Remin's philosophy, and delegates reasoning to the Decision Engine.
 
 Eywa is not an AI model.
 
