@@ -235,3 +235,12 @@ Names are part of the architecture.
 Changing a name changes understanding.
 
 Choose carefully.
+
+---
+
+## Related Documents
+
+- [architecture.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/architecture.md)
+- [philosophy.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/philosophy.md)
+- [glossary.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/glossary.md)
+- [specification-guidelines.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/specification-guidelines.md)

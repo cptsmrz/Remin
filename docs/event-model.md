@@ -4,262 +4,80 @@
 
 ---
 
-# Purpose
+## Purpose
 
-The Event Model defines every meaningful occurrence within Remin.
+The Event Model defines how occurrences are represented within Remin. 
 
-Events describe **what happened**, not **what currently is**.
-
-They form the historical record from which analytics, learning, auditing, automation, and future intelligence are derived.
-
-Events are implementation-independent and represent real-world changes within the Remin ecosystem.
+Events provide a complete, immutable, chronological log of every change that occurs in the system, serving as the basis for auditing, system intelligence, and learning.
 
 ---
 
-# Design Principles
+## What an Event Represents
 
-## 1. Events Are Immutable
+An Event represents a factual occurrence in the real world or within the system at a specific point in time. 
 
-Once an event has occurred, it is never modified.
+Events describe changes, not state. State is a projection derived by reading and aggregating events over time. 
 
-Corrections are recorded as new events.
-
-History must remain trustworthy.
-
----
-
-## 2. Events Represent Facts
-
-Events record actions that actually happened.
-
-They never represent assumptions, predictions, or intentions.
+Examples of events include:
+* `ItemWashed`
+* `OutfitRecommended`
+* `RecommendationRejected`
 
 ---
 
-## 3. Events Are Timestamped
+## Event Lifecycle
 
-Every event records when it occurred.
+Every event moves through the following lifecycle:
 
-Time is essential for understanding behavior, learning patterns, and reconstructing history.
+1. **Occurrence**: An action or change occurs (e.g., initiated by a user or module).
+2. **Creation**: The event is structured according to the canonical event model.
+3. **Recording**: The event is written to the immutable historical log.
+4. **Distribution**: Eywa distributes the event to interested modules.
+5. **Derivation**: Modules process the event to update their projection of state or trigger reactions.
 
----
-
-## 4. Events Are Auditable
-
-Every event should be explainable.
-
-The system must always be able to answer:
-
-- What happened?
-- When did it happen?
-- Why did it happen?
-- Who or what initiated it?
+Once recorded, an event never changes and cannot be deleted.
 
 ---
 
-## 5. Events Drive Intelligence
+## Canonical Event Fields
 
-Artificial intelligence learns from events.
+Every event in Remin must contain the following canonical fields:
 
-It must never invent events.
-
----
-
-# Base Event
-
-Every event contains the following information.
-
-| Property | Description |
-|----------|-------------|
-| id | Permanent unique identifier |
-| type | Event type |
-| timestamp | Time the event occurred |
-| actor | User, Module, or System |
-| target | Entity affected by the event |
-| source | Originating module or service |
-| metadata | Additional event-specific information |
+| Field | Description |
+|---|---|
+| **Event ID** | A permanent, globally unique identifier for the event. |
+| **Event Type** | The name of the event, describing what occurred (e.g., `ItemWashed`). |
+| **Timestamp** | The exact date and time the occurrence was recorded. |
+| **Correlation ID** | An identifier shared by all events that belong to the same end-to-end user request or session, enabling tracing. |
+| **Causation ID** | The identifier of the specific event or request that triggered this event, establishing causal chains. |
+| **Version** | The schema version of the event type, ensuring forward and backward compatibility. |
+| **Source Module** | The identifier of the module that generated the event. |
+| **Domain** | The business domain area this event belongs to (e.g., `Personal Inventory`, `Grooming`). |
 
 ---
 
-# Event Categories
+## Event Principles
 
-## Entity Events
-
-Changes affecting entities.
-
-Examples:
-
-- EntityCreated
-- EntityUpdated
-- EntityArchived
-- EntityDeleted
+* **Immutability**: Events represent historical facts. Once recorded, they can never be modified, deleted, or reordered.
+* **Traceability**: Every event must clearly indicate its origin (Source Module) and what caused it (Causation ID).
+* **Decoupling**: Modules communicate asynchronously by producing and consuming events, rather than calling each other directly.
+* **Separation of Concerns**: Events record changes to the system. They do not hold derived views or current state projections.
 
 ---
 
-## Inventory Events
+## Relationship to Truth
 
-Changes affecting personal assets.
+Within Remin, events represent the definitive record of what has occurred. They are the foundation of **Truth** in the system. 
 
-Examples:
-
-- ItemAdded
-- ItemRemoved
-- ItemWorn
-- ItemWashed
-- ItemIroned
-- ItemPurchased
-- ItemDonated
+While reasoning engines (such as the Decision Engine) may make recommendations or infer state, those inferences are temporary. The only permanent, non-speculative truth is the history captured in the immutable event log.
 
 ---
 
-## Recommendation Events
+## Related Documents
 
-Lifecycle of system recommendations.
-
-Examples:
-
-- RecommendationGenerated
-- RecommendationPresented
-- RecommendationAccepted
-- RecommendationRejected
-- RecommendationDismissed
-- RecommendationFeedbackProvided
-
----
-
-## Calendar Events
-
-Examples:
-
-- EventScheduled
-- EventRescheduled
-- EventCancelled
-- ReminderTriggered
-
----
-
-## Learning Events
-
-Examples:
-
-- BookStarted
-- BookFinished
-- SessionCompleted
-- NoteCreated
-
----
-
-## Project Events
-
-Examples:
-
-- ProjectCreated
-- TaskCreated
-- TaskCompleted
-- MilestoneReached
-
----
-
-## System Events
-
-Examples:
-
-- ModuleEnabled
-- ModuleDisabled
-- SyncStarted
-- SyncCompleted
-- BackupCreated
-- BackupRestored
-
----
-
-# Event Lifecycle
-
-Occurred
-
-↓
-
-Recorded
-
-↓
-
-Processed
-
-↓
-
-Archived
-
-Events are never edited after being recorded.
-
----
-
-# Event Relationships
-
-Events may reference:
-
-- One Entity
-- Multiple Entities
-- Another Event
-- A User Decision
-- A Module
-
-Relationships are defined in the Relationship Model.
-
----
-
-# Event Ordering
-
-Events are processed in chronological order.
-
-If multiple events share the same timestamp, deterministic ordering must be preserved by the implementation.
-
----
-
-# Naming Convention
-
-Event names follow the format:
-
-<Noun><PastTenseVerb>
-
-Examples:
-
-- ItemWashed
-- RecommendationAccepted
-- BookFinished
-- TaskCompleted
-
-Event names describe completed facts.
-
----
-
-# Event Source
-
-An event may originate from:
-
-- User
-- Eywa
-- A Module
-- An External Integration
-- System Maintenance
-
-The origin of every event should remain traceable.
-
----
-
-# Canonical Principle
-
-Events describe history.
-
-State describes the present.
-
-Artificial intelligence reasons using both.
-
----
-
-# Closing Principle
-
-Remin remembers what happened.
-
-It learns from patterns.
-
-It never rewrites history.
+- [architecture.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/architecture.md)
+- [philosophy.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/philosophy.md)
+- [domains.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/domains.md)
+- [glossary.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/glossary.md)
+- [request-lifecycle.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/request-lifecycle.md)
+- [state-model.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/state-model.md)

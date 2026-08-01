@@ -183,3 +183,14 @@ Both are required.
 State exists to make the present understandable.
 
 Events exist to make the past trustworthy.
+
+---
+
+## Related Documents
+
+- [architecture.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/architecture.md)
+- [philosophy.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/philosophy.md)
+- [domains.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/domains.md)
+- [glossary.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/glossary.md)
+- [event-model.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/event-model.md)
+- [data-model.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/data-model.md)

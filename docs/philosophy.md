@@ -138,4 +138,4 @@ The architecture should become richer over time without becoming more complicate
 
 - architecture.md
 - glossary.md
-- adr/
+- decisions/README.md

@@ -23,7 +23,7 @@ This architecture preserves module independence while maintaining consistent sys
 
 ## How to Use
 
-1. Copy `template.md` to a new file named after the module (e.g., `eywa.md`).
+1. Copy `template.md` to a new file named after the module (e.g., `weave.md`).
 2. Fill in the sections.
 3. Review with the team before implementation.
 

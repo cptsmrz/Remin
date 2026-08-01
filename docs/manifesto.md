@@ -54,3 +54,10 @@ If the answer is "no," rethink the feature.
 Remin should never become software that merely appears intelligent.
 
 It should become software that is dependable.
+
+---
+
+## Related Documents
+
+- [vision.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/vision.md)
+- [philosophy.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/philosophy.md)

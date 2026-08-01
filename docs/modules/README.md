@@ -63,7 +63,7 @@ Argus owns auditing.
 
 Prism owns analysis.
 
-Eywa coordinates.
+Weave owns outfit recommendations.
 
 Ownership must never overlap.
 

@@ -41,3 +41,11 @@ If Remin succeeds:
 ---
 
 *"A calm mind begins with a reliable memory."*
+
+---
+
+## Related Documents
+
+- [manifesto.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/manifesto.md)
+- [architecture.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/architecture.md)
+- [philosophy.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/philosophy.md)

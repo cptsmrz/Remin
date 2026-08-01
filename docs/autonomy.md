@@ -138,3 +138,13 @@ Autonomy is earned through demonstrated reliability.
 Increasing autonomy should always require evidence that the system consistently behaves as intended.
 
 Convenience must never override trust.
+
+---
+
+## Related Documents
+
+- [architecture.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/architecture.md)
+- [philosophy.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/philosophy.md)
+- [eywa.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/eywa.md)
+- [module-contracts/README.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/module-contracts/README.md)
+- [glossary.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/glossary.md)

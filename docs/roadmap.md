@@ -61,7 +61,7 @@ Future architectural goals include:
 * philosophy.md
 * domains.md
 * request-lifecycle.md
-* adr/
+* decisions/README.md
 
 ---
 

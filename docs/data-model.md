@@ -1,227 +1,113 @@
-# Remin — Canonical Data Model
+# Remin — Data Model
 
 > "Facts before reasoning."
 
 ---
 
-# Purpose
+## Purpose
 
-The Canonical Data Model defines the core entities that exist within Remin.
+The Data Model defines how information, concepts, and reality are structured and understood within Remin. 
 
-It represents reality as Remin understands it.
-
-This document is implementation-independent.
-
-Databases, APIs, and programming languages must conform to this model rather than define it.
+It provides an implementation-independent conceptual blueprint of the system's entities, their identity, and their interactions, ensuring that modules have a unified understanding of Remin's information domain.
 
 ---
 
-# Design Principles
+## Entity
 
-## 1. Reality First
+An Entity represents a distinct, meaningful concept or object in the real world or within Remin's domain (e.g., a wardrobe item, a scheduled routine, a person). 
 
-Entities represent real-world concepts rather than implementation details.
+Entities possess:
+* A stable, permanent identity.
+* Attributes describing their characteristics.
+* Lifecycles governing their status.
 
-Examples:
-
-- Clothing Item
-- Book
-- Person
-- Project
-
-Examples of things that are **not** entities:
-
-- Database rows
-- API responses
-- UI components
+Entities exist independently of how they are serialized, cached, or persisted in storage.
 
 ---
 
-## 2. One Concept, One Entity
+## Identity
 
-Each entity should represent exactly one concept.
+In Remin, Identity is the unique signature that distinguishes one entity from all others. 
 
-Do not merge unrelated responsibilities.
-
----
-
-## 3. Stable Identity
-
-Every entity has a permanent identifier.
-
-Names may change.
-
-Identifiers do not.
+Identity is treated independently from storage technology:
+* It does not rely on database auto-increment keys or storage-specific identifiers.
+* It remains stable across synchronization, device changes, backups, and migrations.
+* It is generated at the concept's creation and remains unchanged throughout the entity's entire lifecycle.
 
 ---
 
-## 4. Extensibility
+## Canonical ID
 
-New entity types should integrate naturally without requiring changes to existing entities.
+Every entity is identified by a Canonical ID. 
 
----
+A Canonical ID is a unique, human-readable, and deterministic string formatted as:
 
-# Base Entity
+`<prefix>_<identifier>`
 
-Every entity inherits the following common properties.
+Where the prefix denotes the entity type, and the identifier is a unique string. 
 
-| Property | Description |
-|----------|-------------|
-| id | Permanent unique identifier |
-| created_at | Creation timestamp |
-| updated_at | Last modification timestamp |
-| status | Current lifecycle status |
-| tags | User-defined classifications |
-| notes | Free-form annotations |
-
-These properties exist for every entity unless explicitly documented otherwise.
+Examples of Canonical IDs:
+* `item_shirt_001`
+* `routine_morning_002`
+* `person_alex_004`
 
 ---
 
-# Entity Categories
+## Versioning
 
-## Personal Assets
+Entities evolve. To track changes and maintain consistency across modules, entities use optimistic versioning. 
 
-Objects intentionally owned or managed by the user.
-
-Examples:
-
-- Clothing Item
-- Shoes
-- Watch
-- Fragrance
-- Accessory
-- Grooming Product
-- Bag
-
----
-
-## Knowledge
-
-Information intentionally tracked.
-
-Examples:
-
-- Book
-- Article
-- Note
-- Learning Resource
-
----
-
-## Time
-
-Scheduled or historical events.
-
-Examples:
-
-- Calendar Event
-- Reminder
-- Deadline
-- Routine
+Each entity contains a version field that increments monotonically on every modification. This ensures that:
+* Concurrent updates can be detected and coordinated.
+* History can be reconstructed accurately when combined with the Event Model.
+* Modules can verify if they are operating on the latest canonical representation.
 
 ---
 
 ## Relationships
 
-Entities describing people and interactions.
+Relationships define the connections between entities. 
 
-Examples:
-
-- Person
-- Organization
-- Meeting
-
----
-
-## Projects
-
-Long-term work managed within Remin.
-
-Examples:
-
-- Project
-- Goal
-- Milestone
-- Task
+Relationships in Remin are represented conceptually rather than via foreign keys or join tables. They are:
+* **Uni-directional or Bi-directional**: Describing the direction of the semantic reference.
+* **Cardinality-aligned**: Representing one-to-one, one-to-many, or many-to-many associations.
+* **Event-sourced**: Established or broken by corresponding events in the Event Model.
 
 ---
 
-## Recommendations
+## External Assets
 
-Suggestions generated from current knowledge.
+Entities may reference external assets (e.g., images, PDFs, external web URLs). 
 
-Examples:
-
-- Outfit Recommendation
-- Reading Recommendation
-- Purchase Recommendation
-
-Recommendations never become facts automatically.
+External assets are treated as independent, immutable resources referenced by a URI. The entity contains the reference, but the asset itself does not define the entity's state.
 
 ---
 
-# Entity Lifecycle
+## Truth vs Projection
 
-Every entity progresses through a lifecycle.
+Remin distinguishes between the canonical truth and temporary projections:
 
-Created
+* **Canonical Truth**: The authoritative, current state of an entity, derived directly from the history of events.
+* **Projections**: Temporary, optimized, or context-specific views of one or more entities created by modules for quick access, analytics, or UI presentation. 
 
-↓
-
-Active
-
-↓
-
-Archived
-
-↓
-
-Deleted (optional)
-
-Deletion should be exceptional.
-
-Archiving is preferred.
+Projections can always be rebuilt from the event history and must never be treated as the source of truth.
 
 ---
 
-# Ownership
+## Data Principles
 
-Every entity has one owner.
-
-Responsibility for an entity must never be ambiguous.
-
----
-
-# Relationships
-
-Entities may reference one another.
-
-Examples:
-
-- Outfit → Clothing Items
-- Meeting → Person
-- Recommendation → Feedback
-- Book → Reading Session
-
-Relationships are defined separately in the Relationship Model.
+* **Reality-First**: The data model represents real-world entities and concepts, not implementation constraints.
+* **Identity Stability**: An entity's identity is permanent; attributes may change, but the ID never does.
+* **Modularity**: Individual modules own their respective domain data, but share a common understanding of cross-domain entities.
+* **Truth Immutability**: Semantic changes are driven by immutable events; the current data state is a projection of history.
 
 ---
 
-# Canonical Truth
+## Related Documents
 
-The Canonical Data Model is the source of semantic truth.
-
-Implementations may optimize storage.
-
-They must not change meaning.
-
----
-
-# Closing Principle
-
-The data model describes reality.
-
-Artificial intelligence reasons about that reality.
-
-It never defines it.
+- [architecture.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/architecture.md)
+- [philosophy.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/philosophy.md)
+- [domains.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/domains.md)
+- [glossary.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/glossary.md)
+- [event-model.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/event-model.md)
+- [state-model.md](file:///c:/Users/sambi/OneDrive/Desktop/Remin/docs/state-model.md)

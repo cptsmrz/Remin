@@ -63,4 +63,4 @@ Capability Contracts define module responsibilities.
 - architecture.md
 - philosophy.md
 - module-contracts/README.md
-- adr/
+- decisions/README.md
