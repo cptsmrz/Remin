@@ -144,3 +144,14 @@ The interface should never contain business logic.
 This document defines the architecture.
 
 Implementation details belong elsewhere.
+
+---
+
+## Related Documents
+
+- philosophy.md
+- domains.md
+- request-lifecycle.md
+- eywa.md
+- module-contracts/README.md
+- glossary.md

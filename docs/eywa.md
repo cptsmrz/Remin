@@ -290,3 +290,13 @@ Eywa succeeds when:
 # Closing Principle
 
 Eywa exists to preserve Remin's philosophy while helping the user think more clearly, decide more deliberately, and build a system worthy of long-term trust.
+
+---
+
+## Related Documents
+
+- architecture.md
+- philosophy.md
+- request-lifecycle.md
+- module-contracts/README.md
+- glossary.md

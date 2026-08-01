@@ -176,3 +176,14 @@ Truth should always be distinguishable from inference or speculation.
 This glossary evolves with Remin.
 
 New architectural terms should be added here before widespread use.
+
+---
+
+## Related Documents
+
+- architecture.md
+- philosophy.md
+- domains.md
+- request-lifecycle.md
+- eywa.md
+- module-contracts/README.md

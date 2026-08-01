@@ -133,3 +133,9 @@ When extending the system:
 The architecture should become richer over time without becoming more complicated.
 
 ---
+
+## Related Documents
+
+- architecture.md
+- glossary.md
+- adr/

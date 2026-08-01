@@ -30,3 +30,13 @@ This architecture preserves module independence while maintaining consistent sys
 ---
 
 *See [template.md](./template.md) for the contract format.*
+
+---
+
+## Related Documents
+
+- architecture.md
+- domains.md
+- eywa.md
+- request-lifecycle.md
+- specification-guidelines.md
