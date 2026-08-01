@@ -112,3 +112,24 @@ Remin separates governance, reasoning, execution, and presentation.
 No single component should own multiple architectural responsibilities when those responsibilities can be clearly separated.
 
 This principle keeps the system explainable, modular, and extensible as new capabilities are introduced.
+
+---
+
+## Architectural Evolution
+
+Remin is designed to evolve incrementally.
+
+Architectural changes should preserve clarity, explainability, modularity, and user ownership.
+
+When extending the system:
+
+* Prefer extending existing concepts before introducing new ones.
+* Add new modules only when a new domain or responsibility genuinely exists.
+* Separate governance, reasoning, execution, and presentation.
+* Preserve backwards compatibility where practical.
+* Document architectural decisions before implementation.
+* Prefer explicit documentation over implicit behavior.
+
+The architecture should become richer over time without becoming more complicated.
+
+---
