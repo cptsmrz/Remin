@@ -61,23 +61,28 @@ Cannot permanently modify truth without explicit authorization.
 
 Multiple AI providers may exist simultaneously.
 
+The Decision Engine may utilize one or more AI providers to perform reasoning.
+
 ---
 
 # Layer 3 — Eywa
 
-Executive orchestration.
+Executive governance and orchestration.
 
 Responsibilities:
 
 - Understand user intent.
-- Delegate work.
-- Maintain conversation.
-- Respect Remin philosophy.
+- Coordinate modules.
+- Delegate reasoning.
 - Protect user attention.
+- Enforce architectural principles.
+- Maintain conversation continuity.
 
-Eywa is an identity.
+Eywa governs the system.
 
-Not a language model.
+The Decision Engine performs reasoning.
+
+AI providers perform inference.
 
 ---
 

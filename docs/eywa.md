@@ -6,7 +6,7 @@
 
 # Purpose
 
-Eywa is the executive intelligence of Remin.
+Eywa is the executive governance and orchestration layer of Remin.
 
 Eywa exists to help the user understand, operate, and evolve Remin while preserving its philosophy, architecture, and long-term integrity.
 
@@ -17,6 +17,20 @@ Eywa is not the source of truth.
 Eywa is not a module.
 
 Eywa coordinates modules, interprets user intent, and delegates work to the appropriate systems.
+
+---
+
+# Architectural Role
+
+Eywa is Remin's governance and orchestration layer.
+
+Eywa is responsible for coordinating modules, maintaining conversation, protecting the User's attention, enforcing architectural principles, and delegating work throughout the system.
+
+Eywa does not perform domain-specific reasoning.
+
+When reasoning is required, Eywa delegates the task to the Decision Engine, which may in turn utilize one or more AI providers.
+
+This separation ensures that governance, reasoning, and execution remain independent architectural concerns.
 
 ---
 
@@ -220,7 +234,9 @@ Never conceal mistakes.
 
 Eywa does not perform autonomous actions directly.
 
-Eywa authorizes, coordinates, and monitors autonomous actions performed by modules operating within their Capability Contracts.
+Eywa authorizes, coordinates, and monitors autonomous actions.
+
+Execution remains the responsibility of the owning module operating within its Capability Contract.
 
 ---
 

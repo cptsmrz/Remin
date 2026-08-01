@@ -102,3 +102,13 @@ Readable architecture scales better than impressive architecture.
 ### 10. Long-Term Thinking
 
 Every architectural decision should still make sense five years from today.
+
+---
+
+### Separation of Responsibilities
+
+Remin separates governance, reasoning, execution, and presentation.
+
+No single component should own multiple architectural responsibilities when those responsibilities can be clearly separated.
+
+This principle keeps the system explainable, modular, and extensible as new capabilities are introduced.

@@ -4,6 +4,16 @@ A **Capability Contract** defines what a module can do, what it needs, and what 
 
 Every Remin module should have a capability contract before implementation begins.
 
+## Relationship with Eywa
+
+Modules do not communicate directly with one another unless explicitly defined by their contracts.
+
+Cross-domain coordination occurs through Eywa.
+
+When a module requires contextual reasoning beyond its own capabilities, it requests assistance through Eywa, which delegates reasoning to the Decision Engine.
+
+This architecture preserves module independence while maintaining consistent system behavior.
+
 ## Purpose
 
 - Clarify module boundaries
