@@ -45,7 +45,7 @@ Synchronization moves information between these layers according to the architec
 
 ---
 
-# Layer 2 — Intelligence
+# Layer 2 — Reasoning
 
 Reasoning engines.
 
