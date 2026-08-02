@@ -60,11 +60,11 @@ No failure path should silently create or modify facts.
 
 ## Logging Philosophy
 
-Logging should preserve auditability and traceability.
+Logging supports observability, diagnostics, and auditing.
 
-Recorded events remain the immutable history of what occurred.
+Application logs do not replace canonical Truth or architectural Events.
 
-Logs and derived information do not replace canonical Truth.
+Logging should never become the authoritative source of system state.
 
 ---
 
@@ -97,6 +97,18 @@ Cross-domain coordination occurs through Eywa.
 Autonomous actions remain within the owning module's Capability Contract.
 
 Interfaces contain presentation logic only.
+
+---
+
+## Non-Goals
+
+This document does not define architectural decisions.
+
+Architectural decisions belong in ADRs.
+
+Implementation behavior belongs in specifications.
+
+Module responsibilities belong in Capability Contracts.
 
 ---
 

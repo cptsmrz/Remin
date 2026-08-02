@@ -94,6 +94,18 @@ Contributors should prefer explicit documentation over implicit behavior.
 
 ---
 
+## Non-Goals
+
+This document does not define architectural decisions.
+
+Architectural decisions belong in ADRs.
+
+Implementation behavior belongs in specifications.
+
+Module responsibilities belong in Capability Contracts.
+
+---
+
 ## Related Documents
 
 - architecture.md
