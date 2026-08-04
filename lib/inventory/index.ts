@@ -1,3 +1,4 @@
+export * from "@/lib/inventory/in-memory-inventory-repository";
 export * from "@/lib/inventory/inventory-application-service";
 export * from "@/lib/inventory/inventory";
 export * from "@/lib/inventory/inventory-events";
