@@ -1,6 +1,5 @@
 Every AI working on Remin must read this file before making recommendations or modifying the repository.
 
-
 # Remin — Brain
 
 > **Shared working memory for Remin.**
@@ -21,7 +20,7 @@ Remin
 
 **Meaning**
 
-> Know everything you own.  
+> Know everything you own.
 > Wear it better.
 
 **Primary Architect**
@@ -93,11 +92,11 @@ Frozen by default.
 
 **Implementation**
 
-Not started.
+In Progress.
 
 **Current Phase**
 
-Engineering Phase
+Production Implementation
 
 ---
 
@@ -109,19 +108,15 @@ YYYY-MM-DD
 
 **Current Goal**
 
-Complete Engineering Phase E.
+Begin production implementation of Release v0.1.0.
 
 **Current Work**
 
-E3 — Product Specifications
+Implementation Sprint 1 — Core Infrastructure
 
 **Next Immediate Task**
 
-Refine specifications under:
-
-```
-specs/releases/v0.1.0/
-```
+Implement the foundational systems for Release v0.1.0 following the approved specifications.
 
 **Blockers**
 
@@ -236,6 +231,31 @@ Logs never become canonical Truth.
 
 ---
 
+## E3 — Product Specifications
+
+Completed.
+
+Created:
+
+- Release v0.1.0 product specifications
+
+---
+
+## E4 — CI/CD & Engineering Automation
+
+Completed.
+
+Created:
+
+- CI/CD Specification
+- Engineering Automation Specification
+- Quality Gates Specification
+- Release Process Specification
+- Repository Health Specification
+- AI Implementation Agent Contract
+
+---
+
 # ADR Status
 
 Completed through:
@@ -284,19 +304,20 @@ These are implementation choices rather than architectural commitments.
 
 ---
 
-# Next Phase
+# Current Phase
 
-## Engineering Phase
+## Production Implementation
 
 ### Current Target
 
-E3 — Product Specifications
+Implementation Sprint 1
 
 Objectives:
 
-- Refine specifications under `specs/releases/v0.1.0/`
-- Make specifications implementation-ready.
-- Transition from architecture into production implementation.
+- Implement Release v0.1.0 according to the approved specifications.
+- Preserve architectural boundaries during implementation.
+- Validate implementation through engineering reviews.
+- Maintain implementation quality using the Engineering specifications.
 
 ---
 
@@ -333,23 +354,68 @@ Architectural Challenger
 
 ---
 
+## GPT-5.6 (Codex)
+
+**Role**
+
+Lead Implementation Engineer
+
+**Responsibilities**
+
+- Core infrastructure
+- Shared services
+- Data models
+- Repository-wide implementation
+- Cross-module integration
+- Large-scale refactoring
+- Final implementation decisions within approved architecture
+
+---
+
+## Gemini 3.1 Pro (AntiGravity)
+
+**Role**
+
+Feature Implementation Engineer
+
+**Responsibilities**
+
+- Product features
+- User flows
+- Components
+- CRUD implementation
+- Feature iteration
+- UI implementation
+- Product behavior
+
+---
+
+## Claude Opus 4.6
+
+**Role**
+
+Independent Architectural Auditor
+
+**Responsibilities**
+
+- Architecture reviews
+- Critical analysis
+- Repository consistency
+- Technical debt identification
+- Layer violation detection
+- Naming consistency
+- External validation
+
+---
+
 ## TARS *(Planned)*
 
 **Role**
 
 Mission Operations
 
-**Personality**
-
-Configurable
-
-- Humor
-- Honesty
-- Risk Tolerance
-
 **Responsibilities**
 
-- Project execution
 - Sprint management
 - Progress tracking
 - Task orchestration
@@ -366,7 +432,6 @@ Systems Operations
 
 **Responsibilities**
 
-- Concise execution
 - Operational checklists
 - Build verification
 - Release readiness
@@ -375,48 +440,19 @@ Systems Operations
 
 ---
 
-## AntiGravity
+## Multi-Agent Collaboration
 
-**Role**
+Remin supports parallel AI development.
 
-Implementation Agent
+Multiple AI implementation agents may work simultaneously.
 
-**Responsibilities**
+Each agent should:
 
-- Local repository editing
-- Mechanical implementation
-- Refactoring
-- Development assistance
-
----
-
-## Codex
-
-**Role**
-
-Engineering Assistant
-
-**Responsibilities**
-
-- Large-scale implementation
-- Repository-wide modifications
-- Documentation generation
-- Scaffolding
-
----
-
-## Claude
-
-**Role**
-
-Independent Architectural Auditor
-
-**Responsibilities**
-
-- Architecture audits
-- Consistency reviews
-- Critical analysis
-- External validation
+- Respect assigned ownership boundaries.
+- Avoid modifying unrelated files.
+- Assume another implementation agent may be working concurrently.
+- Recommend cross-cutting changes instead of implementing them unless explicitly assigned.
+- Preserve mergeability over implementation completeness.
 
 ---
 
@@ -430,14 +466,17 @@ Independent Architectural Auditor
 - Never commit machine-specific absolute paths.
 - Review AI-generated documentation before committing.
 - Preserve architectural terminology exactly.
+- Implementation ownership is task-based rather than provider-based.
+- Parallel AI execution is supported when ownership boundaries are respected.
+- AI agents should optimize for minimal merge conflicts.
 
 ---
 
 # Open Items
 
-- E3 — Product Specifications
-- E4 — CI/CD & Engineering Automation
-- Begin production implementation
+- Implementation Sprint 1
+- Core Infrastructure
+- Inventory Foundation
 
 ---
 
@@ -446,7 +485,8 @@ Independent Architectural Auditor
 - Architecture is frozen by default.
 - Every architectural change requires an ADR.
 - Verify before assuming.
-- brain.md is the first document every AI should read.
+- `brain.md` is the first document every AI should read.
+- Read `.github/prompts/implementation.md` before making implementation changes.
 - Preserve canonical terminology.
 - Protect architectural boundaries.
 - Do not revisit completed audit phases without explicit reason.
@@ -458,12 +498,13 @@ Independent Architectural Auditor
 Before suggesting or implementing any work:
 
 1. Read **brain.md** completely.
-2. Respect completed phases.
-3. Preserve canonical terminology.
-4. Repository state overrides memory.
-5. Do not redesign architecture without an ADR.
-6. If uncertain, ask instead of assuming.
-7. Keep implementation aligned with the architecture.
+2. Read **.github/prompts/implementation.md** before making implementation changes.
+3. Respect completed phases.
+4. Preserve canonical terminology.
+5. Repository state overrides memory.
+6. Do not redesign architecture without an ADR.
+7. If uncertain, ask instead of assuming.
+8. Keep implementation aligned with the architecture.
 
 ---
 
@@ -471,7 +512,7 @@ Before suggesting or implementing any work:
 
 **Phase**
 
-Engineering Phase
+Production Implementation
 
 **Completed**
 
@@ -479,11 +520,13 @@ Engineering Phase
 - Audit 2
 - Engineering Phase E1
 - Engineering Phase E2
+- Engineering Phase E3
+- Engineering Phase E4
 
 **Current Work**
 
-E3 — Product Specifications
+Production Implementation — Sprint 1
 
 **Next**
 
-Translate specifications into implementation-ready product definitions.
+Build the foundational systems for Release v0.1.0 while preserving the approved architecture.
