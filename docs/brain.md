@@ -138,10 +138,12 @@ Completed:
 - Inventory aggregate
 - Inventory repository contract
 - Inventory domain events
+- Inventory Application Layer
+- In-memory Inventory Repository
 
 In Progress:
 
-- Inventory Application Layer
+- Foundation Review
 
 Not Started:
 
