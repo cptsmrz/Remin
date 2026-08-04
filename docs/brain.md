@@ -342,7 +342,7 @@ These are implementation choices rather than architectural commitments.
 
 ### Current Target
 
-Implementation Sprint 1
+Sprint 2 — Foundation: Infrastructure
 
 Objectives:
 
@@ -577,10 +577,6 @@ Production Implementation
 **Current Work**
 
 Sprint 2 — Foundation Review
-
-**Next Immediate Task**
-
-Complete the in-memory repository foundation and prepare for persistence adapters.
 
 **Next**
 
