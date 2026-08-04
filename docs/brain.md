@@ -504,13 +504,14 @@ Each agent should:
 - Preserve the functional immutable domain model.
 - Aggregates return new state rather than mutating existing instances.
 - Domain events describe completed facts but are recorded by the Application Layer rather than the Domain Layer.
+- Repositories enforce optimistic concurrency but never business rules.
 
 ---
 
 # Open Items
 
-- Inventory Application Layer
-- Persistence Abstractions
+- Foundation Review
+- Persistence Adapters
 - API Layer
 - User Interface
 - Recommendation Engine
