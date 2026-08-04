@@ -575,6 +575,10 @@ Production Implementation
 
 Sprint 2 — Foundation: Infrastructure
 
+**Next Immediate Task**
+
+Complete the in-memory repository foundation and prepare for persistence adapters.
+
 **Next**
 
 - Implement the first in-memory repository while preserving the established Domain → Application → Infrastructure layering.
