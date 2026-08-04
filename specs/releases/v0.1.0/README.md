@@ -68,6 +68,19 @@ Version 0.1.0 is successful when:
 
 ---
 
+# Release Completion
+
+Version 0.1.0 is considered implementation-complete when:
+
+- Every included specification satisfies its defined Acceptance Criteria.
+- Cross-specification terminology remains consistent.
+- No out-of-scope capability is required to complete the release.
+- The implementation remains aligned with Remin's architectural principles.
+
+This defines implementation completeness rather than long-term product success.
+
+---
+
 # Guiding Principles
 
 This release follows the product principles defined in:
@@ -90,6 +103,21 @@ This release is composed of the following specifications:
 - notifications.md
 
 Together, they define the complete scope of version 0.1.0.
+
+---
+
+# Specification Relationships
+
+The specifications included in this release are intentionally modular.
+
+- `wardrobe.md` defines the primary user experience.
+- `inventory.md` provides the canonical representation of owned items.
+- `recommendation-engine.md` generates outfit recommendations using inventory and contextual information.
+- `laundry.md` maintains accurate clothing availability.
+- `feedback-loop.md` improves future recommendations through user interactions.
+- `notifications.md` delivers recommendations and captures user responses.
+
+Together, these specifications define the complete product behavior for Release v0.1.0.
 
 ---
 

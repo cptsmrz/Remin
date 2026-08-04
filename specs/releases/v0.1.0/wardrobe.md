@@ -102,6 +102,18 @@ Recommendations should:
 
 ---
 
+# Acceptance Criteria
+
+The Wardrobe specification is complete when:
+
+- Users can access and manage their clothing inventory through the wardrobe experience.
+- Current clothing availability is accurately reflected.
+- Outfit recommendations are available through the wardrobe experience.
+- User interactions are delegated to the appropriate supporting systems.
+- Historical wardrobe information remains accessible.
+
+---
+
 # Success Criteria
 
 The wardrobe experience is successful when:
