@@ -5,7 +5,7 @@ import {
   type WardrobeItemState,
 } from "@/lib/inventory/wardrobe-item-state";
 
-export type WardrobeCategory = "Clothing" | "Footwear" | "Accessories";
+export type WardrobeCategory = "Clothing";
 
 export interface WardrobeItem extends CanonicalEntity {
   readonly id: CanonicalId;
