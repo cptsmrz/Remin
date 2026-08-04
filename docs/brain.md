@@ -569,13 +569,12 @@ Production Implementation
   - Inventory application services
   - Use-case orchestration
   - Optimistic concurrency coordination
+- Sprint 1 — Foundation Review (Passed)
 
 **Current Work**
 
-Sprint 1 — Foundation Review
+Sprint 2 — Foundation: Infrastructure
 
 **Next**
 
-- Complete the foundation review.
-- Implement the first in-memory repository.
-- Begin persistence adapters while preserving the Domain → Application → Infrastructure architecture.
+- Implement the first in-memory repository while preserving the established Domain → Application → Infrastructure layering.
