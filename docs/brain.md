@@ -78,6 +78,8 @@ Preferred workflow:
 
 Never allow implementation to redefine architecture.
 
+Implementation proceeds in small, reviewable commits that preserve architectural boundaries.
+
 ---
 
 # Repository Status
