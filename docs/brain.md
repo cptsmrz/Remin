@@ -112,15 +112,45 @@ Begin production implementation of Release v0.1.0.
 
 **Current Work**
 
-Implementation Sprint 1 — Core Infrastructure
+Implementation Sprint 1 — Domain & Application Foundations
 
 **Next Immediate Task**
 
-Implement the foundational systems for Release v0.1.0 following the approved specifications.
+Complete the Application Layer for the Inventory module while preserving domain purity and provider independence.
 
 **Blockers**
 
 None.
+
+---
+
+# Implementation Progress
+
+## Sprint 1
+
+Completed:
+
+- Canonical ID generation
+- Canonical Entity contracts
+- Canonical Event envelope
+- WardrobeItem domain entity
+- WardrobeItem lifecycle
+- Inventory aggregate
+- Inventory repository contract
+- Inventory domain events
+
+In Progress:
+
+- Inventory Application Layer
+
+Not Started:
+
+- Persistence adapters
+- API layer
+- UI
+- Recommendation Engine
+- Feedback Loop
+- Notifications
 
 ---
 
@@ -469,14 +499,19 @@ Each agent should:
 - Implementation ownership is task-based rather than provider-based.
 - Parallel AI execution is supported when ownership boundaries are respected.
 - AI agents should optimize for minimal merge conflicts.
+- Preserve the functional immutable domain model.
+- Aggregates return new state rather than mutating existing instances.
+- Domain events describe completed facts but are recorded by the Application Layer rather than the Domain Layer.
 
 ---
 
 # Open Items
 
-- Implementation Sprint 1
-- Core Infrastructure
-- Inventory Foundation
+- Inventory Application Layer
+- Persistence Abstractions
+- API Layer
+- User Interface
+- Recommendation Engine
 
 ---
 
@@ -522,11 +557,25 @@ Production Implementation
 - Engineering Phase E2
 - Engineering Phase E3
 - Engineering Phase E4
+- Sprint 1 — Foundation: Domain
+  - Canonical ID generation
+  - Canonical Entity contracts
+  - Canonical Event envelope
+  - WardrobeItem domain model & lifecycle
+  - Inventory aggregate
+  - Inventory repository contract
+  - Inventory domain events
+- Sprint 1 — Foundation: Application
+  - Inventory application services
+  - Use-case orchestration
+  - Optimistic concurrency coordination
 
 **Current Work**
 
-Production Implementation — Sprint 1
+Sprint 1 — Foundation Review
 
 **Next**
 
-Build the foundational systems for Release v0.1.0 while preserving the approved architecture.
+- Complete the foundation review.
+- Implement the first in-memory repository.
+- Begin persistence adapters while preserving the Domain → Application → Infrastructure architecture.
