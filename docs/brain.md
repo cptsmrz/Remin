@@ -112,11 +112,11 @@ Begin production implementation of Release v0.1.0.
 
 **Current Work**
 
-Implementation Sprint 1 — Domain & Application Foundations
+Sprint 2 — Foundation: Infrastructure
 
 **Next Immediate Task**
 
-Complete the Application Layer for the Inventory module while preserving domain purity and provider independence.
+Complete the in-memory repository foundation and prepare for persistence adapters.
 
 **Blockers**
 
@@ -573,7 +573,7 @@ Production Implementation
 
 **Current Work**
 
-Sprint 2 — Foundation: Infrastructure
+Sprint 2 — Foundation Review
 
 **Next Immediate Task**
 
@@ -581,4 +581,4 @@ Complete the in-memory repository foundation and prepare for persistence adapter
 
 **Next**
 
-- Implement the first in-memory repository while preserving the established Domain → Application → Infrastructure layering.
+- Begin persistence adapters while preserving the established Domain → Application → Infrastructure layering.
